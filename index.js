@@ -20,6 +20,11 @@ function arraySortForm(event)
     //get the array size
     var arraySize = inputArray.length;
 
+    //trim whitespace around each element
+    for (let i= 0; i < arraySize; i++) {
+        inputArray[i] = inputArray[i].trim();
+    }
+
     //make sure the array has at least three elements
     if (arraySize >= 3) 
     {
@@ -34,7 +39,7 @@ function arraySortForm(event)
             }
         }
         //make output string
-        output = ""
+        output = "The data in ascending order is: ";
         for (let i = 0; i < arraySize; i++) {
             output += inputArray[i];
             output += ",";
@@ -43,7 +48,7 @@ function arraySortForm(event)
     } 
     else 
     {
-        output = "Please enter at least three strings seperated by commas and without spaces in between"
+        output = "Please enter at least three strings seperated by commas."
     }
 
     //show the output string

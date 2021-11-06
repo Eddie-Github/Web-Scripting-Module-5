@@ -11,3 +11,7 @@ p, a, footer, label, button, input, h3{
 footer{
     padding-top: 10pt;
 }
+
+#output, footer{
+    font-size: 18pt;
+}
